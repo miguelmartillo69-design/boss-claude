@@ -1,0 +1,3 @@
+[submodule "claude-code-templates"]
+	path = claude-code-templates
+	url = https://github.com/1215-Labs/claude-code-templates.git

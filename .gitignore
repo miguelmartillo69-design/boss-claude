@@ -1,0 +1,24 @@
+# Claude Code CLI sensitive files
+.claude.json
+.claude/settings.json
+.claude/settings.local.json
+.claude/.credentials.json
+.claude/stats-cache.json
+.claude/history.jsonl
+
+# Claude Code CLI cache and runtime
+.claude/plugins/cache/
+.claude/plugins/marketplaces/
+.claude/projects/
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
