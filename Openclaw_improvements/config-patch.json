@@ -1,0 +1,21 @@
+{
+  "description": "OpenClaw configuration patches - apply with jq",
+  "patches": {
+    "reduce_subagent_concurrency": {
+      "path": ".agents.defaults.subagents.maxConcurrent",
+      "value": 4,
+      "reason": "Prevents resource exhaustion and mitigates concurrency bugs in spawn logic"
+    },
+    "enable_diagnostics": {
+      "path": ".diagnostics.enabled",
+      "value": true,
+      "reason": "Enables cost tracking and performance monitoring"
+    },
+    "enable_cache_trace": {
+      "path": ".diagnostics.cacheTrace.enabled",
+      "value": true,
+      "reason": "Enables cache hit/miss tracking"
+    }
+  },
+  "apply_command": "jq '.agents.defaults.subagents.maxConcurrent = 4 | .diagnostics.enabled = true | .diagnostics.cacheTrace.enabled = true' ~/.openclaw/openclaw.json > /tmp/openclaw.json.tmp && mv /tmp/openclaw.json.tmp ~/.openclaw/openclaw.json"
+}
