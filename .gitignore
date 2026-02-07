@@ -7,8 +7,12 @@
 .claude/history.jsonl
 
 # Claude Code CLI cache and runtime
-.claude/plugins/cache/
-.claude/plugins/marketplaces/
+.claude/cache/
+.claude/debug/
+.claude/file-history/
+.claude/ide/
+.claude/todos/
+.claude/plugins/
 .claude/projects/
 
 # Backup files
